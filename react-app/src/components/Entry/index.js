@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams, NavLink, useHistory } from 'react-router-dom';
 import { getEntry, updateOneEntry, deleteOneEntry } from '../../store/entries';
 import entryImg from '../../images/entry-img.png';
-import Swal from 'sweetalert2'
 import './Entry.css';
 
 const Entry = () => {
@@ -23,17 +22,17 @@ const Entry = () => {
 
   const updateEntry = e => {
     e.preventDefault();
-    Swal.fire({
+    /*Swal.fire({
       icon: 'success',
       title: 'Entry Updated!',
-    })
+    })*/
     setEditForm(!editForm)
     dispatch(updateOneEntry({ img, description, rating, amProducts, pmProducts, id }));
   }
 
   const deleteEntry = async e => {
     e.preventDefault();
-    Swal.fire({
+    /*Swal.fire({
       title: 'Delete Product',
       text: 'Are you sure you want to delete this entry permanently?',
       showCancelButton: true,
@@ -44,7 +43,7 @@ const Entry = () => {
         await dispatch(deleteOneEntry(id));
         history.push('/journal');
       }
-    })
+    })*/
   }
 
   useEffect(() => {

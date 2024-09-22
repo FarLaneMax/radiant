@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getRoutines } from '../../store/routines';
 import { addRoutineProduct, removeRoutineProduct } from '../../store/routineProducts';
-import Swal from 'sweetalert2'
 import './RoutineProduct.css';
 
 const RoutineProduct = () => {
@@ -20,19 +19,19 @@ const RoutineProduct = () => {
 
   const handleAdd = e => {
     e.preventDefault();
-    Swal.fire({
+    /*Swal.fire({
       icon: 'success',
       title: 'Product Added to Routine!',
-    })
+    })*/
     dispatch(addRoutineProduct({ addRoutine, id }))
   }
 
   const handleRemove = e => {
     e.preventDefault();
-    Swal.fire({
+    /*Swal.fire({
       icon: 'success',
       title: 'Product Removed from Routine!',
-    })
+    })*/
     dispatch(removeRoutineProduct({ removeRoutine, id }))
   }
 

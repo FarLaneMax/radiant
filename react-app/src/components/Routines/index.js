@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { getRoutines } from '../../store/routines';
 import { createAMEntry, createPMEntry, getExisting } from '../../store/entries';
-import Swal from 'sweetalert2'
 import './Routines.css';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -81,7 +80,7 @@ const Routines = () => {
   const completeAM = async e => {
     e.preventDefault();
     if (!checkExistingEntry.am_products) {
-      Swal.fire({
+      /*Swal.fire({
         title: 'Morning Routine!',
         text: 'Do you want to complete your morning routine?',
         showCancelButton: true,
@@ -93,13 +92,13 @@ const Routines = () => {
           const entry = await dispatch(createAMEntry({ amProducts, currentDate }));
           history.push(`/journal/${entry.id}`);
         }
-      })
+      })*/
     }
   }
 
   const completePM = async e => {
     e.preventDefault();
-    Swal.fire({
+    /*Swal.fire({
       title: 'Evening Routine!',
       text: 'Do you want to complete your evening routine?',
       showCancelButton: true,
@@ -111,7 +110,7 @@ const Routines = () => {
         const entry = await dispatch(createPMEntry({ pmProducts, currentDate }));
         history.push(`/journal/${entry.id}`);
       }
-    })
+    })*/
   }
 
   return (
