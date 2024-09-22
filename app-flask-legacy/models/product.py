@@ -1,4 +1,4 @@
-from .db import db
+#from .db import db
 
 routine_products_table = db.Table('routine_products_table',
   db.Column('routine_id', db.Integer, db.ForeignKey('routines.id'), primary_key=True),

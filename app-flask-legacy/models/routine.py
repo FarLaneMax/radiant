@@ -1,5 +1,5 @@
-from .db import db
-from .product import routine_products_table
+#from .db import db
+#from .product import routine_products_table
 
 class Routine(db.Model):
   __tablename__ = 'routines'

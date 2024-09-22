@@ -1,6 +1,6 @@
-from flask import Blueprint, jsonify, request
-from flask_login import login_required, current_user
-from app.models import Routine, User, Product, db
+#from flask import Blueprint, jsonify, request
+#from flask_login import login_required, current_user
+#from app.models import Routine, User, Product, db
 
 routine_routes = Blueprint('routines', __name__)
 

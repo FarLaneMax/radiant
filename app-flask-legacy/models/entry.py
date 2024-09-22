@@ -1,5 +1,5 @@
-from .db import db
-from datetime import date
+#from .db import db
+#from datetime import date
 
 class Entry(db.Model):
   __tablename__ = 'entries'
